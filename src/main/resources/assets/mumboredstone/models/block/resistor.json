@@ -1,0 +1,33 @@
+{
+    "ambientocclusion": false,
+    "textures": {
+        "particle": "blocks/repeater_off",
+        "slab": "blocks/stone_slab_top",
+        "top": "mumboredstone:blocks/capacitor_stand",
+        "cap": "mumboredstone:blocks/resistor"
+    },
+    "elements": [
+        {   "from": [ 0, 0, 0 ],
+            "to": [ 16, 2, 16 ],
+            "faces": {
+                "down":  { "uv": [ 0,  0, 16, 16 ], "texture": "#slab", "cullface": "down" },
+                "up":    { "uv": [ 0,  0, 16, 16 ], "texture": "#top" },
+                "north": { "uv": [ 0, 14, 16, 16 ], "texture": "#slab", "cullface": "north" },
+                "south": { "uv": [ 0, 14, 16, 16 ], "texture": "#slab", "cullface": "south" },
+                "west":  { "uv": [ 0, 14, 16, 16 ], "texture": "#slab", "cullface": "west" },
+                "east":  { "uv": [ 0, 14, 16, 16 ], "texture": "#slab", "cullface": "east" }
+            }
+        },
+        {   "from": [ 4, 2, 6 ],
+            "to": [ 12, 6, 10 ],
+            "faces": {
+                "down":  { "uv": [ 4, 0, 12, 4 ], "texture": "#cap" },
+                "up":    { "uv": [ 4, 4, 12, 8 ], "texture": "#cap" },
+                "north": { "uv": [ 12,  8, 4, 12 ], "texture": "#cap" },
+                "south": { "uv": [ 4,  12, 12, 16 ], "texture": "#cap" },
+                "west":  { "uv": [ 0,  0, 4, 4 ], "texture": "#cap" },
+                "east":  { "uv": [ 0,  4, 4, 8 ], "texture": "#cap" }
+            }
+        }
+    ]
+}

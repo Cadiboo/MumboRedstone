@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " r ",
+        "rbr",
+        "sss"
+    ],
+    "key": {
+        "r": {
+            "item": "minecraft:repeater",
+        "data": 0
+        },
+        "b": {
+            "item": "minecraft:dye",
+            "data": 4
+        },
+        "s": {
+            "item": "minecraft:stone",
+        "data": 0
+        }
+    },
+    "result": {
+        "item": "mumboredstone:extendrepeater",
+        "data": 0,
+        "count": 1
+    }
+}

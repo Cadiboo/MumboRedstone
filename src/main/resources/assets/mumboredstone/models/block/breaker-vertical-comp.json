@@ -1,0 +1,37 @@
+{
+    "parent": "block/block",
+    "textures": {
+    "particle": "mumboredstone:blocks/breaker_front_vertical",
+        "top": "blocks/furnace_top",
+        "front": "mumboredstone:blocks/breaker_front_vertical",
+        "side": "blocks/furnace_top",
+        "unsticky": "blocks/piston_top_normal",
+        "sidepiston": "blocks/piston_side",
+        "platform": "blocks/piston_top_normal"
+    },
+    "elements": [
+        {   "from": [ 0, 0, 2 ],
+            "to": [ 16, 16, 16 ],
+            "faces": {
+                "down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#top", "cullface": "down", "rotation": 180 },
+                "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#top", "cullface": "up" },
+                "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#front"},
+                "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#side" },
+                "west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#side", "cullface": "west" },
+                "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#side", "cullface": "east" }
+            }
+        },
+    
+        {   "from": [ 4, 4, 0 ],
+            "to": [ 12, 12, 2 ],
+            "faces": {
+                "down":  { "uv": [ 0, 0, 16,  4 ], "texture": "#sidepiston", "rotation": 180 },
+                "up":    { "uv": [ 0, 0, 16,  4 ], "texture": "#sidepiston"},
+                "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#platform"},
+                "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#unsticky" },
+                "west":  { "uv": [ 0, 0, 16,  4 ], "texture": "#sidepiston", "rotation": 270},
+                "east":  { "uv": [ 0, 0, 16,  4 ], "texture": "#sidepiston", "rotation": 90}
+            }
+        }
+    ]
+}

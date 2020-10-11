@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "facing=down,triggered=true":  { "model": "mumboredstone:breaker-vertical-extend", "x": 90 },
+        "facing=up,triggered=true":    { "model": "mumboredstone:breaker-vertical-extend", "x": 270},
+        "facing=north,triggered=true": { "model": "mumboredstone:breaker-extend" },
+        "facing=south,triggered=true": { "model": "mumboredstone:breaker-extend", "y": 180 },
+        "facing=west,triggered=true":  { "model": "mumboredstone:breaker-extend", "y": 270 },
+        "facing=east,triggered=true":  { "model": "mumboredstone:breaker-extend", "y": 90 },
+        
+        "facing=down,triggered=false":  { "model": "mumboredstone:breaker-vertical-comp", "x": 90 },
+        "facing=up,triggered=false":    { "model": "mumboredstone:breaker-vertical-comp", "x": 270},
+        "facing=north,triggered=false": { "model": "mumboredstone:breaker-comp" },
+        "facing=south,triggered=false": { "model": "mumboredstone:breaker-comp", "y": 180 },
+        "facing=west,triggered=false":  { "model": "mumboredstone:breaker-comp", "y": 270 },
+        "facing=east,triggered=false":  { "model": "mumboredstone:breaker-comp", "y": 90 },
+        
+        "inventory":    { "model": "mumboredstone:breaker-comp" }
+    }
+}

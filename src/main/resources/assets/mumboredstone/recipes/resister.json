@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "sii",
+        "iri",
+        "sis"
+    ],
+    "key": {
+        "i": {
+            "item": "minecraft:iron_ingot",
+        "data": 0
+        },
+        "r": {
+            "item": "minecraft:coal_block",
+        "data": 0
+        },
+        "s": {
+            "item": "minecraft:stone",
+        "data": 0
+        }
+    },
+    "result": {
+        "item": "mumboredstone:resister",
+        "data": 0,
+        "count": 4
+    }
+}

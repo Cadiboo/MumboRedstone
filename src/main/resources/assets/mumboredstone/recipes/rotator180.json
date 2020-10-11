@@ -1,0 +1,33 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "i i",
+        "sis",
+        "rsr"
+    ],
+    "key": {
+        "i": {
+            "item": "minecraft:iron_ingot",
+        "data": 0
+        },
+        "s": {
+            "item": "minecraft:cobblestone",
+        "data": 0
+        },
+        "r": [
+        {
+            "item": "mumboredstone:rotatorccw",
+        "data": 0
+        },
+        {
+            "item": "mumboredstone:rotatorcw",
+        "data": 0
+        }
+        ]
+    },
+    "result": {
+        "item": "mumboredstone:rotator180",
+        "data": 0,
+        "count": 1
+    }
+}

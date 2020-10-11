@@ -1,0 +1,6 @@
+{
+    "parent": "block/button_inventory",
+    "textures": {
+        "texture": "mumboredstone:blocks/wireless_a_button"
+    }
+}

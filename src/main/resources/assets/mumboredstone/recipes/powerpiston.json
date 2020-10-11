@@ -1,0 +1,37 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "gpg",
+        "idi",
+        "ipi"
+    ],
+    "key": {
+        "i": {
+            "item": "minecraft:iron_ingot",
+        "data": 0
+        },
+        "g": {
+            "item": "minecraft:gold_ingot",
+        "data": 0
+        },
+        "d": {
+            "item": "minecraft:diamond",
+        "data": 0
+        },
+        "p": [
+          {
+            "item": "minecraft:piston",
+            "data": 0
+          },
+          {
+            "item": "minecraft:sticky_piston",
+        "data": 0
+          }
+        ]
+    },
+    "result": {
+        "item": "mumboredstone:powerpiston",
+        "data": 0,
+        "count": 1
+    }
+}

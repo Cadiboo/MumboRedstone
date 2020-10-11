@@ -1,0 +1,16 @@
+[
+{
+  "modid": "mumboredstone",
+  "name": "Mumbo's Redstone Additions",
+  "description": "A mod of Mumbo's redstone aditions. As well as any others I find/choose to make/think of miself",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["supercat765","MumboJumbo"],
+  "credits": "MumboJumbo for the 10 redstone additions video",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
