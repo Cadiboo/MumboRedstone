@@ -1,6 +1,0 @@
-{
-    "parent": "block/button",
-    "textures": {
-        "texture": "mumboredstone:blocks/wireless_d_button"
-    }
-}

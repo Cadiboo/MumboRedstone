@@ -1,11 +1,11 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "mumboredstone:blocks/wireless_a_reciever",
+        "particle": "mumboredstone:blocks/wireless_a_receiver",
         "slab": "blocks/stone_slab_top",
         "top": "mumboredstone:blocks/capacitor_stand",
-        "base": "mumboredstone:blocks/wireless_a_reciever",
-        "unlit": "blocks/redstone_torch_off"
+        "base": "mumboredstone:blocks/wireless_a_receiver",
+        "lit": "blocks/redstone_torch_on"
     },
     "elements": [
         {   "from": [ 0, 0, 0 ],
@@ -30,15 +30,24 @@
                 "east":  { "uv": [ 4, 2, 12,  5 ], "texture": "#base" }
             }
         },
-        {   "from": [ 7, 5, 7 ],
+        {   "from": [ 7, 10, 7 ],
             "to": [ 9, 10, 9 ],
             "faces": {
-                "down":  { "uv": [ 7, 13, 9, 15 ], "texture": "#unlit" },
-                "up":    { "uv": [ 7,  6, 9,  8 ], "texture": "#unlit" },
-                "north": { "uv": [ 7,  6, 9, 11 ], "texture": "#unlit" },
-                "south": { "uv": [ 7,  6, 9, 11 ], "texture": "#unlit" },
-                "west":  { "uv": [ 7,  6, 9, 11 ], "texture": "#unlit" },
-                "east":  { "uv": [ 7,  6, 9, 11 ], "texture": "#unlit" }
+                "up":   { "uv": [ 7, 6, 9, 8 ], "texture": "#lit" }
+            }
+        },
+        {   "from": [ 7, 5, 6 ],
+            "to": [ 9, 11, 10 ],
+            "faces": {
+                "west": { "uv": [ 6, 5, 10, 11 ], "texture": "#lit" },
+                "east": { "uv": [ 6, 5, 10, 11 ], "texture": "#lit" }
+            }
+        },
+        {   "from": [ 6, 5, 7 ],
+            "to": [ 10, 11, 9 ],
+            "faces": {
+                "north": { "uv": [ 6, 5, 10, 11 ], "texture": "#lit" },
+                "south": { "uv": [ 6, 5, 10, 11 ], "texture": "#lit" }
             }
         }
     ]

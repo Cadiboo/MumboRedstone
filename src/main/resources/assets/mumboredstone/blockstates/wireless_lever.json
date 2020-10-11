@@ -1,71 +1,110 @@
 {
     "variants": {
-        "channel=0,facing=down_z,powered=false": { "model": "mumboredstone:lever_off_A", "x": 180, "y": 180 },
-        "channel=0,facing=down_x,powered=false": { "model": "mumboredstone:lever_off_A", "x": 180, "y": 90 },
-        "channel=0,facing=up_z,powered=false": { "model": "mumboredstone:lever_off_A" },
-        "channel=0,facing=up_x,powered=false": { "model": "mumboredstone:lever_off_A", "y": 270 },
-        "channel=0,facing=east,powered=false": { "model": "mumboredstone:lever_off_A", "x": 90, "y": 90 },
-        "channel=0,facing=west,powered=false": { "model": "mumboredstone:lever_off_A", "x": 90, "y": 270 },
-        "channel=0,facing=south,powered=false" : { "model": "mumboredstone:lever_off_A", "x": 90, "y": 180 },
-        "channel=0,facing=north,powered=false" : { "model": "mumboredstone:lever_off_A", "x": 90 },
-        "channel=0,facing=down_z,powered=true" : { "model": "mumboredstone:lever_A", "x": 180, "y": 180 },
-        "channel=0,facing=down_x,powered=true" : { "model": "mumboredstone:lever_A", "x": 180, "y": 90 },
-        "channel=0,facing=up_z,powered=true": { "model": "mumboredstone:lever_A" },
-        "channel=0,facing=up_x,powered=true": { "model": "mumboredstone:lever_A", "y": 270 },
-        "channel=0,facing=east,powered=true": { "model": "mumboredstone:lever_A", "x": 90, "y": 90 },
-        "channel=0,facing=west,powered=true": { "model": "mumboredstone:lever_A", "x": 90, "y": 270 },
-        "channel=0,facing=south,powered=true": { "model": "mumboredstone:lever_A", "x": 90, "y": 180 },
-        "channel=0,facing=north,powered=true": { "model": "mumboredstone:lever_A", "x": 90 },
-        
-        "channel=1,facing=down_z,powered=false": { "model": "mumboredstone:lever_off_B", "x": 180, "y": 180 },
-        "channel=1,facing=down_x,powered=false": { "model": "mumboredstone:lever_off_B", "x": 180, "y": 90 },
-        "channel=1,facing=up_z,powered=false": { "model": "mumboredstone:lever_off_B" },
-        "channel=1,facing=up_x,powered=false": { "model": "mumboredstone:lever_off_B", "y": 270 },
-        "channel=1,facing=east,powered=false": { "model": "mumboredstone:lever_off_B", "x": 90, "y": 90 },
-        "channel=1,facing=west,powered=false": { "model": "mumboredstone:lever_off_B", "x": 90, "y": 270 },
-        "channel=1,facing=south,powered=false" : { "model": "mumboredstone:lever_off_B", "x": 90, "y": 180 },
-        "channel=1,facing=north,powered=false" : { "model": "mumboredstone:lever_off_B", "x": 90 },
-        "channel=1,facing=down_z,powered=true" : { "model": "mumboredstone:lever_B", "x": 180, "y": 180 },
-        "channel=1,facing=down_x,powered=true" : { "model": "mumboredstone:lever_B", "x": 180, "y": 90 },
-        "channel=1,facing=up_z,powered=true": { "model": "mumboredstone:lever_B" },
-        "channel=1,facing=up_x,powered=true": { "model": "mumboredstone:lever_B", "y": 270 },
-        "channel=1,facing=east,powered=true": { "model": "mumboredstone:lever_B", "x": 90, "y": 90 },
-        "channel=1,facing=west,powered=true": { "model": "mumboredstone:lever_B", "x": 90, "y": 270 },
-        "channel=1,facing=south,powered=true": { "model": "mumboredstone:lever_B", "x": 90, "y": 180 },
-        "channel=1,facing=north,powered=true": { "model": "mumboredstone:lever_B", "x": 90 },
-        
-        "channel=2,facing=down_z,powered=false": { "model": "mumboredstone:lever_off_C", "x": 180, "y": 180 },
-        "channel=2,facing=down_x,powered=false": { "model": "mumboredstone:lever_off_C", "x": 180, "y": 90 },
-        "channel=2,facing=up_z,powered=false": { "model": "mumboredstone:lever_off_C" },
-        "channel=2,facing=up_x,powered=false": { "model": "mumboredstone:lever_off_C", "y": 270 },
-        "channel=2,facing=east,powered=false": { "model": "mumboredstone:lever_off_C", "x": 90, "y": 90 },
-        "channel=2,facing=west,powered=false": { "model": "mumboredstone:lever_off_C", "x": 90, "y": 270 },
-        "channel=2,facing=south,powered=false" : { "model": "mumboredstone:lever_off_C", "x": 90, "y": 180 },
-        "channel=2,facing=north,powered=false" : { "model": "mumboredstone:lever_off_C", "x": 90 },
-        "channel=2,facing=down_z,powered=true" : { "model": "mumboredstone:lever_C", "x": 180, "y": 180 },
-        "channel=2,facing=down_x,powered=true" : { "model": "mumboredstone:lever_C", "x": 180, "y": 90 },
-        "channel=2,facing=up_z,powered=true": { "model": "mumboredstone:lever_C" },
-        "channel=2,facing=up_x,powered=true": { "model": "mumboredstone:lever_C", "y": 270 },
-        "channel=2,facing=east,powered=true": { "model": "mumboredstone:lever_C", "x": 90, "y": 90 },
-        "channel=2,facing=west,powered=true": { "model": "mumboredstone:lever_C", "x": 90, "y": 270 },
-        "channel=2,facing=south,powered=true": { "model": "mumboredstone:lever_C", "x": 90, "y": 180 },
-        "channel=2,facing=north,powered=true": { "model": "mumboredstone:lever_C", "x": 90 },
-        
-        "channel=3,facing=down_z,powered=false": { "model": "mumboredstone:lever_off_D", "x": 180, "y": 180 },
-        "channel=3,facing=down_x,powered=false": { "model": "mumboredstone:lever_off_D", "x": 180, "y": 90 },
-        "channel=3,facing=up_z,powered=false": { "model": "mumboredstone:lever_off_D" },
-        "channel=3,facing=up_x,powered=false": { "model": "mumboredstone:lever_off_D", "y": 270 },
-        "channel=3,facing=east,powered=false": { "model": "mumboredstone:lever_off_D", "x": 90, "y": 90 },
-        "channel=3,facing=west,powered=false": { "model": "mumboredstone:lever_off_D", "x": 90, "y": 270 },
-        "channel=3,facing=south,powered=false" : { "model": "mumboredstone:lever_off_D", "x": 90, "y": 180 },
-        "channel=3,facing=north,powered=false" : { "model": "mumboredstone:lever_off_D", "x": 90 },
-        "channel=3,facing=down_z,powered=true" : { "model": "mumboredstone:lever_D", "x": 180, "y": 180 },
-        "channel=3,facing=down_x,powered=true" : { "model": "mumboredstone:lever_D", "x": 180, "y": 90 },
-        "channel=3,facing=up_z,powered=true": { "model": "mumboredstone:lever_D" },
-        "channel=3,facing=up_x,powered=true": { "model": "mumboredstone:lever_D", "y": 270 },
-        "channel=3,facing=east,powered=true": { "model": "mumboredstone:lever_D", "x": 90, "y": 90 },
-        "channel=3,facing=west,powered=true": { "model": "mumboredstone:lever_D", "x": 90, "y": 270 },
-        "channel=3,facing=south,powered=true": { "model": "mumboredstone:lever_D", "x": 90, "y": 180 },
-        "channel=3,facing=north,powered=true": { "model": "mumboredstone:lever_D", "x": 90 }
+        "face=ceiling,facing=east,powered=false": {
+            "model": "mumboredstone:block/lever_on",
+            "x": 180,
+            "y": 270
+        },
+        "face=ceiling,facing=east,powered=true": {
+            "model": "mumboredstone:block/lever",
+            "x": 180,
+            "y": 270
+        },
+        "face=ceiling,facing=north,powered=false": {
+            "model": "mumboredstone:block/lever_on",
+            "x": 180,
+            "y": 180
+        },
+        "face=ceiling,facing=north,powered=true": {
+            "model": "mumboredstone:block/lever",
+            "x": 180,
+            "y": 180
+        },
+        "face=ceiling,facing=south,powered=false": {
+            "model": "mumboredstone:block/lever_on",
+            "x": 180
+        },
+        "face=ceiling,facing=south,powered=true": {
+            "model": "mumboredstone:block/lever",
+            "x": 180
+        },
+        "face=ceiling,facing=west,powered=false": {
+            "model": "mumboredstone:block/lever_on",
+            "x": 180,
+            "y": 90
+        },
+        "face=ceiling,facing=west,powered=true": {
+            "model": "mumboredstone:block/lever",
+            "x": 180,
+            "y": 90
+        },
+        "face=floor,facing=east,powered=false": {
+            "model": "mumboredstone:block/lever_on",
+            "y": 90
+        },
+        "face=floor,facing=east,powered=true": {
+            "model": "mumboredstone:block/lever",
+            "y": 90
+        },
+        "face=floor,facing=north,powered=false": {
+            "model": "mumboredstone:block/lever_on"
+        },
+        "face=floor,facing=north,powered=true": {
+            "model": "mumboredstone:block/lever"
+        },
+        "face=floor,facing=south,powered=false": {
+            "model": "mumboredstone:block/lever_on",
+            "y": 180
+        },
+        "face=floor,facing=south,powered=true": {
+            "model": "mumboredstone:block/lever",
+            "y": 180
+        },
+        "face=floor,facing=west,powered=false": {
+            "model": "mumboredstone:block/lever_on",
+            "y": 270
+        },
+        "face=floor,facing=west,powered=true": {
+            "model": "mumboredstone:block/lever",
+            "y": 270
+        },
+        "face=wall,facing=east,powered=false": {
+            "model": "mumboredstone:block/lever_on",
+            "x": 90,
+            "y": 90
+        },
+        "face=wall,facing=east,powered=true": {
+            "model": "mumboredstone:block/lever",
+            "x": 90,
+            "y": 90
+        },
+        "face=wall,facing=north,powered=false": {
+            "model": "mumboredstone:block/lever_on",
+            "x": 90
+        },
+        "face=wall,facing=north,powered=true": {
+            "model": "mumboredstone:block/lever",
+            "x": 90
+        },
+        "face=wall,facing=south,powered=false": {
+            "model": "mumboredstone:block/lever_on",
+            "x": 90,
+            "y": 180
+        },
+        "face=wall,facing=south,powered=true": {
+            "model": "mumboredstone:block/lever",
+            "x": 90,
+            "y": 180
+        },
+        "face=wall,facing=west,powered=false": {
+            "model": "mumboredstone:block/lever_on",
+            "x": 90,
+            "y": 270
+        },
+        "face=wall,facing=west,powered=true": {
+            "model": "mumboredstone:block/lever",
+            "x": 90,
+            "y": 270
+        }
     }
 }

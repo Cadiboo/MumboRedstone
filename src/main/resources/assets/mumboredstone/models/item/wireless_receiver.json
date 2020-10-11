@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "mumboredstone:items/wireless_reciever"
+        "layer0": "mumboredstone:items/wireless_receiver"
     }
 }

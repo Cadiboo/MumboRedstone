@@ -1,6 +1,0 @@
-{
-    "parent": "block/button_pressed",
-    "textures": {
-        "texture": "mumboredstone:blocks/wireless_b_button"
-    }
-}

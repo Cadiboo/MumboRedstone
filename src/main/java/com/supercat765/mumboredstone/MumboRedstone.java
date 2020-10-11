@@ -3,6 +3,7 @@ package com.supercat765.mumboredstone;
 import com.supercat765.mumboredstone.config.MRConfig;
 import com.supercat765.mumboredstone.init.MRBlocks;
 import com.supercat765.mumboredstone.init.MRItems;
+import com.supercat765.mumboredstone.init.MRTileEntityTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -21,6 +22,7 @@ public class MumboRedstone {
         IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
         MRBlocks.REGISTRY.register(modBus);
         MRItems.REGISTRY.register(modBus);
+        MRTileEntityTypes.REGISTRY.register(modBus);
         modBus.addListener(this::onClientSetup);
     }
 

@@ -16,5 +16,17 @@ public class MRItems {
         "bluestone",
         () -> new BlockItem(MRBlocks.BLUESTONE_WIRE.get(), new Item.Properties().group(ItemGroup.REDSTONE))
     );
+    public static final RegistryObject<Item> WIRELESS_BUTTON = REGISTRY.register(
+        "wireless_button",
+        () -> new BlockItem(MRBlocks.WIRELESS_BUTTON.get(), new Item.Properties().group(ItemGroup.REDSTONE))
+    );
+    public static final RegistryObject<Item> WIRELESS_LEVER = REGISTRY.register(
+        "wireless_lever",
+        () -> new BlockItem(MRBlocks.WIRELESS_LEVER.get(), new Item.Properties().group(ItemGroup.REDSTONE))
+    );
+    public static final RegistryObject<Item> WIRELESS_RECEIVER = REGISTRY.register(
+        "wireless_receiver",
+        () -> new BlockItem(MRBlocks.WIRELESS_RECEIVER.get(), new Item.Properties().group(ItemGroup.REDSTONE))
+    );
 
 }
