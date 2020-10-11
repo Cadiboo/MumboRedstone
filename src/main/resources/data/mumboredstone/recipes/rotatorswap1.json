@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "group": "rotatorccw",
+    "ingredients": [
+        {
+            "item": "mumboredstone:rotatorcw",
+        "data": 0
+        }
+    ],
+    "result": {
+        "item": "mumboredstone:rotatorccw",
+        "count": 1
+    }
+}

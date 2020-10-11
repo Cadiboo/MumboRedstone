@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "rotator",
+    "pattern": [
+        "scs",
+        "sds",
+        "srs"
+    ],
+    "key": {
+        "d": {
+            "item": "minecraft:dispenser",
+        "data": 0
+        },
+        "s": {
+            "item": "minecraft:shulker_shell",
+        "data": 0
+        },
+        "r": {
+            "item": "minecraft:comparator",
+        "data": 0
+        },
+        "c": {
+            "item": "minecraft:chorus_fruit",
+        "data": 0
+        }
+    },
+    "result": {
+        "item": "mumboredstone:placer",
+        "data": 0,
+        "count": 1
+    }
+}

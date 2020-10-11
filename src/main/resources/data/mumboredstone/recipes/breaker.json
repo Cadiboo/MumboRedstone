@@ -1,0 +1,31 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "sss",
+        "sdp",
+        "srs"
+    ],
+    "key": {
+        "d": {
+            "item": "minecraft:dispenser",
+        "data": 0
+        },
+        "s": {
+            "item": "minecraft:shulker_shell",
+        "data": 0
+        },
+        "r": {
+            "item": "minecraft:comparator",
+        "data": 0
+        },
+        "p": {
+            "item": "minecraft:piston",
+        "data": 0
+        }
+    },
+    "result": {
+        "item": "mumboredstone:breaker",
+        "data": 0,
+        "count": 1
+    }
+}

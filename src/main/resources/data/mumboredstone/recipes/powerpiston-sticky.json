@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "s",
+        "p"
+    ],
+    "key": {
+        "s": {
+            "item": "minecraft:slime_ball",
+        "data": 0
+        },
+        "p": {
+            "item": "mumboredstone:powerpiston",
+        "data": 0
+        }
+    },
+    "result": {
+        "item": "mumboredstone:powerpiston_sticky",
+        "data": 0,
+        "count": 1
+    }
+}

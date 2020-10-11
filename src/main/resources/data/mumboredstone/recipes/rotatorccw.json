@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "rotatorccw",
+    "pattern": [
+        "i i",
+        "sis",
+        "pPr"
+    ],
+    "key": {
+        "i": {
+            "item": "minecraft:iron_ingot",
+        "data": 0
+        },
+        "s": {
+            "item": "minecraft:cobblestone",
+        "data": 0
+        },
+        "p": {
+            "item": "minecraft:piston",
+        "data": 0
+        },
+        "P": {
+            "item": "minecraft:sticky_piston",
+        "data": 0
+        },
+        "r": {
+            "item": "minecraft:redstone",
+        "data": 0
+        }
+    },
+    "result": {
+        "item": "mumboredstone:rotatorccw",
+        "data": 0,
+        "count": 1
+    }
+}
