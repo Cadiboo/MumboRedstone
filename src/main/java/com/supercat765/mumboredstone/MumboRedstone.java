@@ -1,0 +1,29 @@
+package com.supercat765.mumboredstone;
+
+import com.supercat765.mumboredstone.config.MRConfig;
+import com.supercat765.mumboredstone.init.MRBlocks;
+import com.supercat765.mumboredstone.init.MRItems;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+
+@Mod(MumboRedstone.MOD_ID)
+public class MumboRedstone {
+    public static final String MOD_ID = "mumboredstone";
+
+    public MumboRedstone() {
+        ModLoadingContext context = ModLoadingContext.get();
+        MRConfig.register(context);
+        IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
+        MRBlocks.REGISTRY.register(modBus);
+        MRItems.REGISTRY.register(modBus);
+        modBus.addListener(this::onClientSetup);
+    }
+
+    private void onClientSetup(FMLClientSetupEvent event) {
+
+    }
+
+}
