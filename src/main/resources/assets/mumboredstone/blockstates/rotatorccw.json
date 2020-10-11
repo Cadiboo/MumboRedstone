@@ -1,0 +1,20 @@
+{
+    "variants": {
+        "facing=down,triggered=false":  { "model": "mumboredstone:rotatorccw", "x": 180 },
+        "facing=up,triggered=false":    { "model": "mumboredstone:rotatorccw" },
+        "facing=north,triggered=false": { "model": "mumboredstone:rotatorccw", "x": 90},
+        "facing=south,triggered=false": { "model": "mumboredstone:rotatorccw", "x": 270 },
+        "facing=west,triggered=false":  { "model": "mumboredstone:rotatorccw", "x": 90, "y": 270 },
+        "facing=east,triggered=false":  { "model": "mumboredstone:rotatorccw", "x": 90, "y": 90 },
+        
+        "facing=down,triggered=true":  { "model": "mumboredstone:rotatorccw", "x": 180 },
+        "facing=up,triggered=true":    { "model": "mumboredstone:rotatorccw" },
+        "facing=north,triggered=true": { "model": "mumboredstone:rotatorccw", "x": 90},
+        "facing=south,triggered=true": { "model": "mumboredstone:rotatorccw", "x": 270 },
+        "facing=west,triggered=true":  { "model": "mumboredstone:rotatorccw", "x": 90, "y": 270 },
+        "facing=east,triggered=true":  { "model": "mumboredstone:rotatorccw", "x": 90, "y": 90 },
+        
+        "inventory":    { "model": "mumboredstone:rotatorccw" }
+        
+    }
+}

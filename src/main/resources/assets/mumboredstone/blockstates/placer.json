@@ -1,0 +1,16 @@
+{
+    "variants": {
+        "facing=down,triggered=true":  { "model": "mumboredstone:placer_vertical", "x": 180 },
+        "facing=up,triggered=true":    { "model": "mumboredstone:placer_vertical" },
+        "facing=north,triggered=true": { "model": "mumboredstone:placer" },
+        "facing=south,triggered=true": { "model": "mumboredstone:placer", "y": 180 },
+        "facing=west,triggered=true":  { "model": "mumboredstone:placer", "y": 270 },
+        "facing=east,triggered=true":  { "model": "mumboredstone:placer", "y": 90 },
+        "facing=down,triggered=false":  { "model": "mumboredstone:placer_vertical", "x": 180 },
+        "facing=up,triggered=false":    { "model": "mumboredstone:placer_vertical" },
+        "facing=north,triggered=false": { "model": "mumboredstone:placer" },
+        "facing=south,triggered=false": { "model": "mumboredstone:placer", "y": 180 },
+        "facing=west,triggered=false":  { "model": "mumboredstone:placer", "y": 270 },
+        "facing=east,triggered=false":  { "model": "mumboredstone:placer", "y": 90 }
+    }
+}

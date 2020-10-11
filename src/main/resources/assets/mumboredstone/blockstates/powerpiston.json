@@ -1,0 +1,16 @@
+{
+    "variants": {
+        "extended=false,facing=down": { "model": "mumboredstone:powerpiston_normal", "x": 90 },
+        "extended=false,facing=up": { "model": "mumboredstone:powerpiston_normal", "x": 270 },
+        "extended=false,facing=north": { "model": "mumboredstone:powerpiston_normal" },
+        "extended=false,facing=south": { "model": "mumboredstone:powerpiston_normal", "y": 180 },
+        "extended=false,facing=west": { "model": "mumboredstone:powerpiston_normal", "y": 270 },
+        "extended=false,facing=east": { "model": "mumboredstone:powerpiston_normal", "y": 90 },
+        "extended=true,facing=down": { "model": "mumboredstone:piston_extended", "x": 90 },
+        "extended=true,facing=up": { "model": "mumboredstone:piston_extended", "x": 270 },
+        "extended=true,facing=north": { "model": "mumboredstone:piston_extended" },
+        "extended=true,facing=south": { "model": "mumboredstone:piston_extended", "y": 180 },
+        "extended=true,facing=west": { "model": "mumboredstone:piston_extended", "y": 270 },
+        "extended=true,facing=east": { "model": "mumboredstone:piston_extended", "y": 90 }
+    }
+}

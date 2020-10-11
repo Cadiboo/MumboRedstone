@@ -1,0 +1,8 @@
+{
+    "parent": "block/piston",
+    "textures": {
+        "bottom": "mumboredstone:blocks/powerpiston_bottom",
+        "side": "mumboredstone:blocks/powerpiston_side",
+        "platform": "mumboredstone:blocks/powerpiston_top_sticky"
+    }
+}

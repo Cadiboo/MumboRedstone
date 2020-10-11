@@ -1,0 +1,16 @@
+{
+    "variants": {
+        "facing=up,powered=false": { "model": "mumboredstone:detector", "x": 270 },
+        "facing=down,powered=false": { "model": "mumboredstone:detector", "x": 90 },
+        "facing=north,powered=false": { "model": "mumboredstone:detector" },
+        "facing=south,powered=false": { "model": "mumboredstone:detector", "y": 180 },
+        "facing=west,powered=false": { "model": "mumboredstone:detector", "y": 270 },
+        "facing=east,powered=false": { "model": "mumboredstone:detector", "y": 90 },
+        "facing=up,powered=true": { "model": "mumboredstone:detector_powered", "x": 270 },
+        "facing=down,powered=true": { "model": "mumboredstone:detector_powered", "x": 90 },
+        "facing=north,powered=true": { "model": "mumboredstone:detector_powered" },
+        "facing=south,powered=true": { "model": "mumboredstone:detector_powered", "y": 180 },
+        "facing=west,powered=true": { "model": "mumboredstone:detector_powered", "y": 270 },
+        "facing=east,powered=true": { "model": "mumboredstone:detector_powered", "y": 90 }
+    }
+}
