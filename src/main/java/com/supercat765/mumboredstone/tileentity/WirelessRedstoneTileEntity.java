@@ -12,11 +12,16 @@ import net.minecraft.tileentity.TileEntityType;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Wireless redstone between any blocks that are all in loaded chunks and on the same channel.
+ * TODO: I ripped out the previous 4-channel system that changed on right click, need to add another way to change the channel (maybe a GUI?)
+ */
 public abstract class WirelessRedstoneTileEntity extends TileEntity {
 
     public static final String CHANNEL_KEY = "channel";
 
     protected static Int2BooleanMap CHANNEL_STATES = new Int2BooleanArrayMap();
+    /** TE's remove themselves from this list when they're removed from the world so we don't need to worry about WeakReferences. */
     static Int2ObjectMap<List<WirelessReceiverTileEntity>> CHANNEL_LISTENERS = new Int2ObjectArrayMap<>();
 
     private int channel;
@@ -59,4 +64,5 @@ public abstract class WirelessRedstoneTileEntity extends TileEntity {
         super.read(state, nbt);
         setChannel(nbt.getInt(CHANNEL_KEY));
     }
+
 }

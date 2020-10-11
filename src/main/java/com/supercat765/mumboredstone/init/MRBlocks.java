@@ -21,6 +21,7 @@ public class MRBlocks {
         // Properties copied from vanilla Blocks.REDSTONE_WIRE
         () -> new BluestoneWireBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance())
     );
+    // TODO: It's probably easier & more compatible to have a "wireless sender" block than a bunch of individual sending blocks
     public static final RegistryObject<WirelessButtonBlock> WIRELESS_BUTTON = REGISTRY.register(
         "wireless_button",
         // Properties copied from vanilla Blocks.OAK_BUTTON
