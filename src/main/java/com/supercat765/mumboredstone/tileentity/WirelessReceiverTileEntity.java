@@ -15,10 +15,9 @@ public class WirelessReceiverTileEntity extends WirelessRedstoneTileEntity imple
 
     public WirelessReceiverTileEntity(TileEntityType<?> tileEntityTypeIn) {
         super(tileEntityTypeIn);
-        getListeners(getChannel()).add(this);
     }
 
-    /** Loaded by {@link WirelessRedstoneTileEntity#read} */
+    /** Loaded by {@link #onLoad()} and then overwritten by {@link WirelessRedstoneTileEntity#read} if this TE is being read from disk. */
     private boolean isChannelPowered = false;
 
     @Override
@@ -33,6 +32,13 @@ public class WirelessReceiverTileEntity extends WirelessRedstoneTileEntity imple
             world.setBlockState(pos, blockState.with(POWERED, false));
         else if (isChannelPowered && !currentlyPowered)
             world.setBlockState(pos, blockState.with(POWERED, true));
+    }
+
+    /** Called when this TE is added to the world, either by placing or being loaded from disk. */
+    @Override
+    public void onLoad() {
+        if (!world.isRemote)
+            getListeners(getChannel()).add(this);
     }
 
     @Override
