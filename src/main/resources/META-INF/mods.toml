@@ -1,0 +1,31 @@
+modLoader="javafml"
+loaderVersion="[33,)"
+license="All Rights Reserved"
+issueTrackerURL="https://github.com/Cadiboo/MumboRedstone/issues"
+[[mods]]
+modId="mumboredstone"
+version="${version}"
+displayName="Mumbo Redstone"
+#updateJSONURL=""
+displayURL="https://github.com/Cadiboo/MumboRedstone"
+logoFile="mumboredstone.png"
+credits="MumboJumbo for the 10 redstone additions video"
+authors="supercat765, MumboJumbo"
+description='''
+A mod of Mumbo's redstone aditions.
+As well as any others I find/choose to make/think of myself
+'''
+
+[[dependencies.mumboredstone]]
+modId="forge"
+mandatory=true
+versionRange="[33,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.mumboredstone]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.16.3]"
+ordering="NONE"
+side="BOTH"
