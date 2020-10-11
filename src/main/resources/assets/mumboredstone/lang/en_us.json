@@ -1,0 +1,18 @@
+{
+    "block.powerpiston": "Power Piston",
+    "block.powerpiston_sticky": "Sticky Power Piston",
+    "block.rotatorcw": "Block Rotator Clockwise",
+    "block.rotator180": "Block Rotator 180 Flip",
+    "block.rotatorccw": "Block Rotator Counter-Clockwise",
+    "block.capacitor": "Redstone Capacitor",
+    "block.extendrepeater": "Pulse Extending Repeater",
+    "block.detector": "Entity Detector",
+    "block.resister": "Redstone Resister",
+    "item.bluestone": "Bluestone Dust",
+    "block.wireless_lever": "Wireless Lever",
+    "block.wireless_button": "Wireless Button",
+    "block.wireless_reciever": "Wireless Reciever",
+    "block.placer": "Block Placer",
+    "block.breaker": "Block Breaker",
+    "item.fake": "Fake Item"
+}
