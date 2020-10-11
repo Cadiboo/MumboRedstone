@@ -29,4 +29,8 @@ public class WirelessSenderTileEntity extends WirelessRedstoneTileEntity impleme
         notifyListeners(getChannel(), currentlyPowered);
     }
 
+    @Override
+    public void remove() {
+        notifyListeners(getChannel(), false);
+    }
 }
