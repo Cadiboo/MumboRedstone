@@ -2,7 +2,9 @@ package com.supercat765.mumboredstone.client;
 
 import org.junit.Test;
 
-import static com.supercat765.mumboredstone.client.BlockColorHandler.*;
+import static com.supercat765.mumboredstone.client.BlockColorHandler.WHITE;
+import static com.supercat765.mumboredstone.client.BlockColorHandler.getBluestoneWireColorForPowerLevel;
+import static net.minecraft.util.ColorHelper.PackedColor.*;
 import static org.junit.Assert.assertEquals;
 
 public class BlockColorHandlerTest {

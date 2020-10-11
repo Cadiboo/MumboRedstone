@@ -3,6 +3,8 @@ package com.supercat765.mumboredstone;
 import com.supercat765.mumboredstone.config.MRConfig;
 import com.supercat765.mumboredstone.init.MRBlocks;
 import com.supercat765.mumboredstone.init.MRItems;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -23,7 +25,7 @@ public class MumboRedstone {
     }
 
     private void onClientSetup(FMLClientSetupEvent event) {
-
+        RenderTypeLookup.setRenderLayer(MRBlocks.BLUESTONE_WIRE.get(), RenderType.getCutout());
     }
 
 }

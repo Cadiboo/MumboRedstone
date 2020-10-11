@@ -4,7 +4,6 @@ import com.supercat765.mumboredstone.MumboRedstone;
 import com.supercat765.mumboredstone.block.BluestoneWireBlock;
 import com.supercat765.mumboredstone.init.MRBlocks;
 import net.minecraft.client.renderer.color.BlockColors;
-import net.minecraft.util.ColorHelper.PackedColor;
 import net.minecraft.util.math.vector.Vector3f;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ColorHandlerEvent;
@@ -13,9 +12,10 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 
 import java.util.Arrays;
 
+import static net.minecraft.util.ColorHelper.PackedColor.*;
 import static net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 
-@EventBusSubscriber(modid = MumboRedstone.MOD_ID, bus = Bus.FORGE, value = Dist.CLIENT)
+@EventBusSubscriber(modid = MumboRedstone.MOD_ID, bus = Bus.MOD, value = Dist.CLIENT)
 public class BlockColorHandler {
 
     static final int WHITE = 0xFF_FF_FF_FF;
@@ -38,7 +38,7 @@ public class BlockColorHandler {
                 return WHITE;
             int power = state.get(BluestoneWireBlock.POWER);
             return BLUESTONE_WIRE_POWER_COLORS[power];
-        });
+        }, MRBlocks.BLUESTONE_WIRE.get());
     }
 
     public static void setBluestoneWirePowerColors(int unpoweredColor, int fullyPoweredColor) {
@@ -80,28 +80,12 @@ public class BlockColorHandler {
         int g = (int) ((g1 * iRatio) + (g2 * ratio));
         int b = (int) ((b1 * iRatio) + (b2 * ratio));
 
-        return PackedColor.func_233006_a_(a, r, g, b);
+        return packColor(a, r, g, b);
     }
 
     /** "https://stackoverflow.com/a/7506169" */
     private static float map(float value, int fromMin, int fromMax, int toMin, int toMax) {
         return (value - fromMin) * (toMax - toMin) / (fromMax - fromMin) + toMin;
-    }
-
-    static int getAlpha(int color) {
-        return PackedColor.func_233004_a_(color);
-    }
-
-    static int getRed(int color) {
-        return PackedColor.func_233007_b_(color);
-    }
-
-    static int getGreen(int color) {
-        return PackedColor.func_233008_c_(color);
-    }
-
-    static int getBlue(int color) {
-        return PackedColor.func_233009_d_(color);
     }
 
 }
