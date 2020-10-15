@@ -54,8 +54,7 @@ public class WirelessReceiverTileEntity extends WirelessRedstoneTileEntity imple
     }
 
     @Override
-    public void remove() {
-        super.remove();
+    public void removeFromChannels() {
         getListeners(getChannel()).remove(this);
     }
 

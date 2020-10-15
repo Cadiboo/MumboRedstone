@@ -30,7 +30,7 @@ public class WirelessSenderTileEntity extends WirelessRedstoneTileEntity impleme
     }
 
     @Override
-    public void remove() {
+    public void removeFromChannels() {
         notifyListeners(getChannel(), false);
     }
 }

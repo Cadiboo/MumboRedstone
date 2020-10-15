@@ -67,4 +67,19 @@ public abstract class WirelessRedstoneTileEntity extends TileEntity {
             setChannel(nbt.getInt(CHANNEL_KEY));
     }
 
+    @Override
+    public void remove() {
+        super.remove();
+        removeFromChannels();
+    }
+
+
+    @Override
+    public void onChunkUnloaded() {
+        super.onChunkUnloaded();
+        removeFromChannels();
+    }
+
+    abstract void removeFromChannels();
+
 }
