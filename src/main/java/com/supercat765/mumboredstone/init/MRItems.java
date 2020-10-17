@@ -1,7 +1,7 @@
 package com.supercat765.mumboredstone.init;
 
 import com.supercat765.mumboredstone.MumboRedstone;
-import net.minecraft.block.Block;
+import com.supercat765.mumboredstone.item.WirelessConfigurationToolItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
