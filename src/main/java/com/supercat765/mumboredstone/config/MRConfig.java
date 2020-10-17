@@ -37,6 +37,10 @@ public class MRConfig {
             Client.bake();
     }
 
+    private static String translationKey(String name) {
+        return MumboRedstone.MOD_ID + ".config." + name;
+    }
+
     public static class Client {
 
         static int DEFAULT_BLUESTONE_UNPOWERED_COLOR = packColor(255, 6, 13, 40);
@@ -91,14 +95,12 @@ public class MRConfig {
         }
     }
 
-    private static String translationKey(String name) {
-        return MumboRedstone.MOD_ID + ".config." + name;
-    }
-
     public static class Server {
 
         static final Impl INSTANCE;
         static final ForgeConfigSpec SPEC;
+
+        public static int wirelessRedstoneDefaultChannel;
 
         public static double detectorRange;// = 10;
         public static double detectorAngle;// = 3*(Math.PI)/4;
@@ -128,10 +130,15 @@ public class MRConfig {
         }
 
         public static void bake() {
+            wirelessRedstoneDefaultChannel = INSTANCE.wirelessRedstoneDefaultChannel.get();
         }
 
         private static class Impl {
+            private final IntValue wirelessRedstoneDefaultChannel;
             private Impl(final Builder builder) {
+                wirelessRedstoneDefaultChannel = builder
+                    .translation("wirelessRedstoneDefaultChannel")
+                    .defineInRange("wirelessRedstoneDefaultChannel", 0, Integer.MIN_VALUE, Integer.MAX_VALUE);
 
             }
         }

@@ -1,5 +1,6 @@
 package com.supercat765.mumboredstone.tileentity;
 
+import com.supercat765.mumboredstone.config.MRConfig;
 import it.unimi.dsi.fastutil.ints.Int2IntArrayMap;
 import it.unimi.dsi.fastutil.ints.Int2IntMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectArrayMap;
@@ -22,13 +23,12 @@ import java.util.List;
 public abstract class WirelessRedstoneTileEntity extends TileEntity {
 
     public static final String CHANNEL_KEY = "channel";
-    public static final int DEFAULT_CHANNEL = 0;
 
     private static final Int2IntMap CHANNEL_STATES = new Int2IntArrayMap();
     /** TE's remove themselves from this list when they're removed from the world so we don't need to worry about WeakReferences. */
     private static final Int2ObjectMap<List<WirelessReceiverTileEntity>> CHANNEL_LISTENERS = new Int2ObjectArrayMap<>();
 
-    private int channel = DEFAULT_CHANNEL;
+    private int channel = MRConfig.Server.wirelessRedstoneDefaultChannel;
 
     public WirelessRedstoneTileEntity(TileEntityType<?> tileEntityTypeIn) {
         super(tileEntityTypeIn);
