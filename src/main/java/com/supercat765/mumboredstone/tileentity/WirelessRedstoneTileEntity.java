@@ -8,6 +8,9 @@ import net.minecraft.block.BlockState;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.server.FMLServerStoppingEvent;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -15,6 +18,7 @@ import java.util.List;
 /**
  * Wireless redstone between any blocks that are all in loaded chunks and on the same channel.
  */
+@Mod.EventBusSubscriber
 public abstract class WirelessRedstoneTileEntity extends TileEntity {
 
     public static final String CHANNEL_KEY = "channel";
@@ -22,7 +26,7 @@ public abstract class WirelessRedstoneTileEntity extends TileEntity {
 
     private static final Int2IntMap CHANNEL_STATES = new Int2IntArrayMap();
     /** TE's remove themselves from this list when they're removed from the world so we don't need to worry about WeakReferences. */
-    static Int2ObjectMap<List<WirelessReceiverTileEntity>> CHANNEL_LISTENERS = new Int2ObjectArrayMap<>();
+    private static final Int2ObjectMap<List<WirelessReceiverTileEntity>> CHANNEL_LISTENERS = new Int2ObjectArrayMap<>();
 
     private int channel;
 
@@ -94,5 +98,14 @@ public abstract class WirelessRedstoneTileEntity extends TileEntity {
     }
 
     abstract void removeFromChannel();
+
+    /**
+     * Clients will start and stop multiple integrated servers during their lifetime, need to clean up after them.
+     */
+    @SubscribeEvent
+    public static void onServerStoppingEvent(FMLServerStoppingEvent event) {
+        CHANNEL_STATES.clear();
+        CHANNEL_LISTENERS.clear();
+    }
 
 }
