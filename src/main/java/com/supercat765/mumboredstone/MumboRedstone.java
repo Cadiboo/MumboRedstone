@@ -28,6 +28,7 @@ public class MumboRedstone {
 
     private void onClientSetup(FMLClientSetupEvent event) {
         RenderTypeLookup.setRenderLayer(MRBlocks.BLUESTONE_WIRE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(MRBlocks.WIRELESS_RECEIVER.get(), RenderType.getCutout());
     }
 
 }
