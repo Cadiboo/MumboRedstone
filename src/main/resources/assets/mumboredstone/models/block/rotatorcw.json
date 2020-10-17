@@ -1,9 +1,9 @@
 {
     "parent": "mumboredstone:block/rotator",
     "textures": {
-        "bottom": "mumboredstone:blocks/rotatorbotom",
-        "top": "mumboredstone:blocks/rotatortop",
-        "side": "mumboredstone:blocks/rotatorcw",
-        "cross": "mumboredstone:blocks/rotatorclaw"
+        "bottom": "mumboredstone:block/rotatorbotom",
+        "top": "mumboredstone:block/rotatortop",
+        "side": "mumboredstone:block/rotatorcw",
+        "cross": "mumboredstone:block/rotatorclaw"
     }
 }

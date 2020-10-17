@@ -2,21 +2,18 @@
     "type": "minecraft:crafting_shaped",
     "pattern": [
         "t",
-        "m",
+        "c",
         "s"
     ],
     "key": {
         "t": {
-            "item": "minecraft:redstone_torch",
-            "data": 0
+            "item": "minecraft:redstone_torch"
         },
-        "m": {
-            "item": "minecraft:mossy_cobblestone",
-            "data": 0
+        "c": {
+            "item": "mumboredstone:crystal_oscillator"
         },
         "s": {
-            "item": "minecraft:shulker_shell",
-            "data": 0
+            "item": "minecraft:stone"
         }
     },
     "result": {

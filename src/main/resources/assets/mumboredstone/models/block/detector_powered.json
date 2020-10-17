@@ -2,6 +2,6 @@
     "parent": "mumboredstone:block/detector",
     "textures": {
         "bottom": "blocks/observer_back_lit",
-        "front": "mumboredstone:blocks/detector_on"
+        "front": "mumboredstone:block/detector_on"
     }
 }

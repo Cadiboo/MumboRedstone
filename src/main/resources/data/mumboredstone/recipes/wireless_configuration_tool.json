@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "c",
+        "s"
+    ],
+    "key": {
+        "c": {
+            "item": "mumboredstone:crystal_oscillator",
+            "data": 0
+        },
+        "s": {
+            "item": "minecraft:stone",
+            "data": 0
+        }
+    },
+    "result": {
+        "item": "mumboredstone:wireless_configuration_tool",
+        "data": 0,
+        "count": 1
+    }
+}

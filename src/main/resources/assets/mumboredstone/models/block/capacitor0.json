@@ -3,8 +3,8 @@
     "textures": {
         "particle": "blocks/repeater_off",
         "slab": "blocks/stone_slab_top",
-        "top": "mumboredstone:blocks/capacitor_stand",
-        "cap": "mumboredstone:blocks/capacitor_0"
+        "top": "mumboredstone:block/capacitor_stand",
+        "cap": "mumboredstone:block/capacitor_0"
     },
     "elements": [
         {   "from": [ 0, 0, 0 ],

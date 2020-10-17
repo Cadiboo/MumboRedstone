@@ -3,7 +3,7 @@
     "textures": {
         "particle": "blocks/repeater_on",
         "slab": "blocks/stone_slab_top",
-        "top": "mumboredstone:blocks/repeater_on",
+        "top": "mumboredstone:block/repeater_on",
         "lit": "blocks/redstone_torch_on",
         "lock": "blocks/bedrock"
     },

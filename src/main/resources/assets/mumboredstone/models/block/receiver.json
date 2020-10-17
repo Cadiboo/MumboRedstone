@@ -1,10 +1,10 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "mumboredstone:blocks/wireless_receiver",
-        "slab": "minecraft:blocks/stone_slab_top",
-        "top": "mumboredstone:blocks/capacitor_stand",
-        "base": "mumboredstone:blocks/wireless_receiver"
+        "particle": "mumboredstone:block/wireless_receiver",
+        "slab": "minecraft:block/stone_slab_top",
+        "top": "mumboredstone:block/capacitor_stand",
+        "base": "mumboredstone:block/wireless_receiver"
     },
     "elements": [
         {   "from": [ 0, 0, 0 ],

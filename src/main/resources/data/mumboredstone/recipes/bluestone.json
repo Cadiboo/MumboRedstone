@@ -1,45 +1,36 @@
 {
-    "type": "minecraft:crafting_shapeless",
-    "ingredients": [
-        {
-            "item": "minecraft:redstone",
-        "data": 0
-        },
-        {
-            "item": "minecraft:redstone",
-        "data": 0
-        },
-        {
-            "item": "minecraft:redstone",
-        "data": 0
-        },
-        {
-            "item": "minecraft:redstone",
-        "data": 0
-        },
-        {
-            "item": "minecraft:redstone",
-        "data": 0
-        },
-        {
-            "item": "minecraft:redstone",
-        "data": 0
-        },
-        {
-            "item": "minecraft:redstone",
-        "data": 0
-        },
-        {
-            "item": "minecraft:redstone",
-        "data": 0
-        },
-        {
-            "item": "minecraft:dye",
-        "data": 4
-        }
-    ],
-    "result": {
-        "item": "mumboredstone:bluestone",
-        "count": 8
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:lapis_lazuli"
     }
+  ],
+  "result": {
+    "item": "mumboredstone:bluestone",
+    "count": 8
+  }
 }

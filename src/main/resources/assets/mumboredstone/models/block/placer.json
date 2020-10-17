@@ -2,7 +2,7 @@
     "parent": "block/orientable",
     "textures": {
         "top": "blocks/furnace_top",
-        "front": "mumboredstone:blocks/placer_front_horizontal",
+        "front": "mumboredstone:block/placer_front_horizontal",
         "side": "blocks/furnace_side"
     }
 }

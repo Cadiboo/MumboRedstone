@@ -1,8 +1,8 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "mumboredstone:blocks/wireless_a_lever",
-        "base": "mumboredstone:blocks/wireless_a_lever",
+        "particle": "mumboredstone:block/wireless_a_lever",
+        "base": "mumboredstone:block/wireless_a_lever",
         "lever": "blocks/lever"
     },
     "elements": [

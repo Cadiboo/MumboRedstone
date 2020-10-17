@@ -1,9 +1,9 @@
 {
     "parent": "block/block",
     "textures": {
-    "particle": "mumboredstone:blocks/breaker_front_vertical",
+    "particle": "mumboredstone:block/breaker_front_vertical",
         "top": "blocks/furnace_top",
-        "front": "mumboredstone:blocks/breaker_front_horizontal",
+        "front": "mumboredstone:block/breaker_front_horizontal",
         "side": "blocks/furnace_side",
         "unsticky": "blocks/piston_top_normal",
         "sidepiston": "blocks/piston_side",

@@ -1,8 +1,8 @@
 {
     "parent": "block/piston_head",
     "textures": {
-        "unsticky": "mumboredstone:blocks/powerpiston_top_normal",
-        "side": "mumboredstone:blocks/powerpiston_side",
-        "platform": "mumboredstone:blocks/powerpiston_top_sticky"
+        "unsticky": "mumboredstone:block/powerpiston_top_normal",
+        "side": "mumboredstone:block/powerpiston_side",
+        "platform": "mumboredstone:block/powerpiston_top_sticky"
     }
 }

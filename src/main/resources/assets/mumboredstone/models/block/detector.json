@@ -4,8 +4,8 @@
         "bottom": "blocks/observer_back",
         "side": "blocks/observer_side",
         "top": "blocks/observer_top",
-        "front": "mumboredstone:blocks/detector",
-        "particle": "mumboredstone:blocks/detector"
+        "front": "mumboredstone:block/detector",
+        "particle": "mumboredstone:block/detector"
     },
     "elements": [
         {   "from": [ 0, 0, 0 ],

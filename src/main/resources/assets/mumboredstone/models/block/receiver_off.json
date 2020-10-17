@@ -1,6 +1,6 @@
 {
     "parent": "mumboredstone:block/receiver",
     "textures": {
-        "light": "minecraft:blocks/redstone_torch_off"
+        "light": "minecraft:block/redstone_torch_off"
     }
 }
