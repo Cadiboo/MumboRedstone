@@ -28,7 +28,7 @@ public abstract class WirelessRedstoneTileEntity extends TileEntity {
     /** TE's remove themselves from this list when they're removed from the world so we don't need to worry about WeakReferences. */
     private static final Int2ObjectMap<List<WirelessReceiverTileEntity>> CHANNEL_LISTENERS = new Int2ObjectArrayMap<>();
 
-    private int channel;
+    private int channel = DEFAULT_CHANNEL;
 
     public WirelessRedstoneTileEntity(TileEntityType<?> tileEntityTypeIn) {
         super(tileEntityTypeIn);
