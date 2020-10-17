@@ -2,7 +2,7 @@
     "ambientocclusion": false,
     "textures": {
         "particle": "mumboredstone:block/wireless_receiver",
-        "slab": "minecraft:block/stone_slab_top",
+        "slab": "minecraft:block/smooth_stone",
         "top": "mumboredstone:block/capacitor_stand",
         "base": "mumboredstone:block/wireless_receiver"
     },

@@ -1,5 +1,5 @@
 {
-    "parent": "mumboredstone:block/receiver",
+    "parent": "mumboredstone:block/wireless_receiver",
     "textures": {
         "light": "minecraft:block/redstone_torch"
     }

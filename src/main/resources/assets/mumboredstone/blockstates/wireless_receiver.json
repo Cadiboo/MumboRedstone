@@ -1,7 +1,10 @@
 {
-    "variants": {
-        "powered=false": { "model": "mumboredstone:block/receiver_off"},
-        "powered=true": { "model": "mumboredstone:block/receiver_on"}
+  "variants": {
+    "powered=false": {
+      "model": "mumboredstone:block/wireless_receiver_off"
+    },
+    "powered=true": {
+      "model": "mumboredstone:block/wireless_receiver_on"
     }
+  }
 }
-        
