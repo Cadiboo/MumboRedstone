@@ -42,7 +42,7 @@ public abstract class WirelessRedstoneTileEntity extends TileEntity {
      * @param markDirty True if the TE is not being initialised, used to prevent deadlock on world load when the TE tries to save itself while reading iteself.
      */
     public void setChannel(int newChannel, boolean markDirty) {
-        removeFromChannel();
+        onRemovedFromChannel();
         channel = newChannel;
         // "markDirty" tells vanilla that the chunk containing the tile entity has
         // changed and means the game will save the chunk to disk later.
@@ -72,8 +72,7 @@ public abstract class WirelessRedstoneTileEntity extends TileEntity {
     @Override
     public CompoundNBT write(CompoundNBT nbt) {
         nbt = super.write(nbt);
-        if (world == null || !world.isRemote)
-            nbt.putInt(CHANNEL_KEY, channel);
+        nbt.putInt(CHANNEL_KEY, getChannel());
         return nbt;
     }
 
@@ -87,17 +86,17 @@ public abstract class WirelessRedstoneTileEntity extends TileEntity {
     @Override
     public void remove() {
         super.remove();
-        removeFromChannel();
+        onRemovedFromChannel();
     }
 
 
     @Override
     public void onChunkUnloaded() {
         super.onChunkUnloaded();
-        removeFromChannel();
+        onRemovedFromChannel();
     }
 
-    abstract void removeFromChannel();
+    abstract void onRemovedFromChannel();
 
     /**
      * Clients will start and stop multiple integrated servers during their lifetime, need to clean up after them.

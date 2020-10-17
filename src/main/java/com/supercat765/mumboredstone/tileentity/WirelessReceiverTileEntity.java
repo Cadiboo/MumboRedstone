@@ -17,7 +17,6 @@ public class WirelessReceiverTileEntity extends WirelessRedstoneTileEntity imple
         super(tileEntityTypeIn);
     }
 
-    /** Loaded by {@link #onLoad()} and then overwritten by {@link WirelessRedstoneTileEntity#read} if this TE is being read from disk. */
     private boolean isChannelPowered = false;
 
     @Override
@@ -43,12 +42,16 @@ public class WirelessReceiverTileEntity extends WirelessRedstoneTileEntity imple
     @Override
     public void onLoad() {
         if (!world.isRemote)
-            setChannel(DEFAULT_CHANNEL, false);
+            onAddedToChannel();
     }
 
     @Override
     public void setChannel(int newChannel, boolean markDirty) {
         super.setChannel(newChannel, markDirty);
+        onAddedToChannel();
+    }
+
+    private void onAddedToChannel() {
         getListeners(getChannel()).add(this);
         isChannelPowered = isChannelPowered(getChannel());
     }
@@ -58,7 +61,7 @@ public class WirelessReceiverTileEntity extends WirelessRedstoneTileEntity imple
     }
 
     @Override
-    public void removeFromChannel() {
+    public void onRemovedFromChannel() {
         getListeners(getChannel()).remove(this);
     }
 
