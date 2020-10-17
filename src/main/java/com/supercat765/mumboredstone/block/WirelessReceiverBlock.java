@@ -10,6 +10,9 @@ import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
+
+import java.util.Random;
 
 /**
  * Outputs a redstone signal from it's wireless channel.
@@ -29,6 +32,12 @@ public class WirelessReceiverBlock extends RedstoneDiodeBlock {
     @Override
     protected int calculateInputStrength(World worldIn, BlockPos pos, BlockState state) {
         return 0;
+    }
+
+    /** Stop it trying to turn itself off because it thinks it's still a diode */
+    @Override
+    public void tick(BlockState state, ServerWorld worldIn, BlockPos pos, Random rand) {
+        // NO OP
     }
 
     @Override
