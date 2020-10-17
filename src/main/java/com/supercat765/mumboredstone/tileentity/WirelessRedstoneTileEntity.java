@@ -70,7 +70,7 @@ public abstract class WirelessRedstoneTileEntity extends TileEntity {
     @Override
     public CompoundNBT write(CompoundNBT nbt) {
         nbt = super.write(nbt);
-        if (!world.isRemote)
+        if (world == null || !world.isRemote)
             nbt.putInt(CHANNEL_KEY, channel);
         return nbt;
     }
@@ -78,7 +78,7 @@ public abstract class WirelessRedstoneTileEntity extends TileEntity {
     @Override
     public void read(BlockState state, CompoundNBT nbt) {
         super.read(state, nbt);
-        if (!world.isRemote)
+        if (world == null || !world.isRemote)
             setChannel(nbt.getInt(CHANNEL_KEY));
     }
 
