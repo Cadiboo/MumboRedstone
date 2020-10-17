@@ -1,5 +1,5 @@
 {
-    "parent": "block/piston_extended",
+    "parent": "minecraft:block/piston_extended",
     "textures": {
         "bottom": "mumboredstone:blocks/powerpiston_bottom",
         "side": "mumboredstone:blocks/powerpiston_side",

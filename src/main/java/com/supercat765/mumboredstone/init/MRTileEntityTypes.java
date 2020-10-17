@@ -2,7 +2,7 @@ package com.supercat765.mumboredstone.init;
 
 import com.supercat765.mumboredstone.MumboRedstone;
 import com.supercat765.mumboredstone.tileentity.WirelessReceiverTileEntity;
-import com.supercat765.mumboredstone.tileentity.WirelessSenderTileEntity;
+import com.supercat765.mumboredstone.tileentity.WirelessTransmitterTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
@@ -16,11 +16,11 @@ public class MRTileEntityTypes {
 
     public static final DeferredRegister<TileEntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.TILE_ENTITIES, MumboRedstone.MOD_ID);
 
-    public static final RegistryObject<TileEntityType<WirelessSenderTileEntity>> WIRELESS_REDSTONE_SENDER = REGISTRY.register(
-        "wireless_sender",
-        () -> createType(WirelessSenderTileEntity::new, MRBlocks.WIRELESS_BUTTON.get(), MRBlocks.WIRELESS_LEVER.get())
+    public static final RegistryObject<TileEntityType<WirelessTransmitterTileEntity>> WIRELESS_TRANSMITTER = REGISTRY.register(
+        "wireless_transmitter",
+        () -> createType(WirelessTransmitterTileEntity::new, MRBlocks.WIRELESS_TRANSMITTER.get())
     );
-    public static final RegistryObject<TileEntityType<WirelessReceiverTileEntity>> WIRELESS_REDSTONE_RECEIVER = REGISTRY.register(
+    public static final RegistryObject<TileEntityType<WirelessReceiverTileEntity>> WIRELESS_RECEIVER = REGISTRY.register(
         "wireless_receiver",
         () -> createType(WirelessReceiverTileEntity::new, MRBlocks.WIRELESS_RECEIVER.get())
     );

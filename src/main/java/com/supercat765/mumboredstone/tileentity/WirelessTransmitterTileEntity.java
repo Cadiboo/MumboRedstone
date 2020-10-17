@@ -7,13 +7,13 @@ import net.minecraft.tileentity.TileEntityType;
 
 import static net.minecraft.state.properties.BlockStateProperties.POWERED;
 
-public class WirelessSenderTileEntity extends WirelessRedstoneTileEntity implements ITickableTileEntity {
+public class WirelessTransmitterTileEntity extends WirelessRedstoneTileEntity implements ITickableTileEntity {
 
-    public WirelessSenderTileEntity() {
-        this(MRTileEntityTypes.WIRELESS_REDSTONE_SENDER.get());
+    public WirelessTransmitterTileEntity() {
+        this(MRTileEntityTypes.WIRELESS_TRANSMITTER.get());
     }
 
-    public WirelessSenderTileEntity(TileEntityType<?> tileEntityTypeIn) {
+    public WirelessTransmitterTileEntity(TileEntityType<?> tileEntityTypeIn) {
         super(tileEntityTypeIn);
     }
 

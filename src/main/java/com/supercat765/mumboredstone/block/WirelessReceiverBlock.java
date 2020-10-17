@@ -1,7 +1,6 @@
 package com.supercat765.mumboredstone.block;
 
 import com.supercat765.mumboredstone.init.MRTileEntityTypes;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.RedstoneDiodeBlock;
@@ -12,6 +11,7 @@ import net.minecraft.world.IBlockReader;
 
 /**
  * Outputs a redstone signal from it's wireless channel.
+ * TODO: Make this not accept power from normal redstone
  */
 public class WirelessReceiverBlock extends RedstoneDiodeBlock {
     public WirelessReceiverBlock(Properties properties) {
@@ -35,6 +35,6 @@ public class WirelessReceiverBlock extends RedstoneDiodeBlock {
 
     @Override
     public TileEntity createTileEntity(BlockState state, IBlockReader world) {
-        return MRTileEntityTypes.WIRELESS_REDSTONE_RECEIVER.get().create();
+        return MRTileEntityTypes.WIRELESS_RECEIVER.get().create();
     }
 }

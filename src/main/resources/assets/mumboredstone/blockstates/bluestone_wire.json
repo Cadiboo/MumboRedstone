@@ -1,4 +1,5 @@
 {
+  "comment": "Copied from the vanilla redstone blockstate json",
   "multipart": [
     {
       "when": {

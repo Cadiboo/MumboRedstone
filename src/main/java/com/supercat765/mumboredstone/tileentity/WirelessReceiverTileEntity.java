@@ -10,7 +10,7 @@ import static net.minecraft.state.properties.BlockStateProperties.POWERED;
 public class WirelessReceiverTileEntity extends WirelessRedstoneTileEntity implements ITickableTileEntity {
 
     public WirelessReceiverTileEntity() {
-        this(MRTileEntityTypes.WIRELESS_REDSTONE_RECEIVER.get());
+        this(MRTileEntityTypes.WIRELESS_RECEIVER.get());
     }
 
     public WirelessReceiverTileEntity(TileEntityType<?> tileEntityTypeIn) {
@@ -29,9 +29,9 @@ public class WirelessReceiverTileEntity extends WirelessRedstoneTileEntity imple
             return;
         boolean currentlyPowered = blockState.get(POWERED);
         if (!isChannelPowered && currentlyPowered)
-            world.setBlockState(pos, blockState.with(POWERED, false));
+            updatePowered(false);
         else if (isChannelPowered && !currentlyPowered)
-            world.setBlockState(pos, blockState.with(POWERED, true));
+            updatePowered(true);
     }
 
     /** Called when this TE is added to the world, either by placing or being loaded from disk. */

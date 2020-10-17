@@ -12,9 +12,10 @@ import net.minecraft.tileentity.TileEntityType;
 import java.util.LinkedList;
 import java.util.List;
 
+import static net.minecraft.state.properties.BlockStateProperties.POWERED;
+
 /**
  * Wireless redstone between any blocks that are all in loaded chunks and on the same channel.
- * TODO: I ripped out the previous 4-channel system that changed on right click, need to add another way to change the channel (maybe a GUI?)
  */
 public abstract class WirelessRedstoneTileEntity extends TileEntity {
 
@@ -52,6 +53,11 @@ public abstract class WirelessRedstoneTileEntity extends TileEntity {
         markDirty();
     }
 
+    protected void updatePowered(boolean isPowered) {
+        world.setBlockState(pos, getBlockState().with(POWERED, isPowered));
+        world.notifyNeighborsOfStateChange(pos, getBlockState().getBlock());
+    }
+
     @Override
     public CompoundNBT write(CompoundNBT nbt) {
         nbt = super.write(nbt);
@@ -77,6 +83,7 @@ public abstract class WirelessRedstoneTileEntity extends TileEntity {
     @Override
     public void onChunkUnloaded() {
         super.onChunkUnloaded();
+
         removeFromChannels();
     }
 

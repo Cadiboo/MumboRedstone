@@ -106,8 +106,6 @@ public class MRConfig {
 
         public static int ExtenderFactor = 4;
 
-        public static int[] BluestoneColor = {19, 59, 219, 6, 13, 40};
-
         public static int PowerPistonStrength = 24;
 
         public static int SurvivalWirelessChannels = 3;

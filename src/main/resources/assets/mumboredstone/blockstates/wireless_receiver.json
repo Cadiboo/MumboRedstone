@@ -1,7 +1,7 @@
 {
     "variants": {
         "powered=false": { "model": "mumboredstone:block/receiver_off"},
-        "powered=true": { "model": "mumboredstone:block/receiver"}
+        "powered=true": { "model": "mumboredstone:block/receiver_on"}
     }
 }
         
