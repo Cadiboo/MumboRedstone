@@ -43,12 +43,12 @@ public class WirelessReceiverTileEntity extends WirelessRedstoneTileEntity imple
     @Override
     public void onLoad() {
         if (!world.isRemote)
-            setChannel(DEFAULT_CHANNEL);
+            setChannel(DEFAULT_CHANNEL, false);
     }
 
     @Override
-    public void setChannel(int newChannel) {
-        super.setChannel(newChannel);
+    public void setChannel(int newChannel, boolean markDirty) {
+        super.setChannel(newChannel, markDirty);
         getListeners(getChannel()).add(this);
         isChannelPowered = isChannelPowered(getChannel());
     }

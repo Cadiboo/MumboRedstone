@@ -37,7 +37,7 @@ public class WirelessConfigurationToolItem extends Item {
         if (player == null)
             return ActionResultType.SUCCESS;
         int newChannel = wireless.getChannel() + (player.isSneaking() ? -1 : 1);
-        wireless.setChannel(newChannel);
+        wireless.setChannel(newChannel, true);
         player.sendMessage(new StringTextComponent("New channel: " + newChannel), Util.DUMMY_UUID);
         return ActionResultType.SUCCESS;
     }
