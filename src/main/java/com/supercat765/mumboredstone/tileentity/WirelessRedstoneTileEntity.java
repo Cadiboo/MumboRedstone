@@ -1,7 +1,7 @@
 package com.supercat765.mumboredstone.tileentity;
 
-import it.unimi.dsi.fastutil.ints.Int2BooleanArrayMap;
-import it.unimi.dsi.fastutil.ints.Int2BooleanMap;
+import it.unimi.dsi.fastutil.ints.Int2IntArrayMap;
+import it.unimi.dsi.fastutil.ints.Int2IntMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectArrayMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.block.BlockState;
@@ -20,8 +20,9 @@ import static net.minecraft.state.properties.BlockStateProperties.POWERED;
 public abstract class WirelessRedstoneTileEntity extends TileEntity {
 
     public static final String CHANNEL_KEY = "channel";
+    public static final int DEFAULT_CHANNEL = 0;
 
-    protected static Int2BooleanMap CHANNEL_STATES = new Int2BooleanArrayMap();
+    private static final Int2IntMap CHANNEL_STATES = new Int2IntArrayMap();
     /** TE's remove themselves from this list when they're removed from the world so we don't need to worry about WeakReferences. */
     static Int2ObjectMap<List<WirelessReceiverTileEntity>> CHANNEL_LISTENERS = new Int2ObjectArrayMap<>();
 
@@ -35,22 +36,30 @@ public abstract class WirelessRedstoneTileEntity extends TileEntity {
         return channel;
     }
 
-    public static List<WirelessReceiverTileEntity> getListeners(int channel) {
-        return CHANNEL_LISTENERS.computeIfAbsent(channel, $ -> new LinkedList<>());
-    }
-
-    public static void notifyListeners(int channel, boolean channelPowered) {
-        if (CHANNEL_STATES.get(channel) == channelPowered)
-            return;
-        CHANNEL_STATES.put(channel, channelPowered);
-        getListeners(channel).forEach(te -> te.onChannelPoweredChanged(channelPowered));
-    }
-
     public void setChannel(int newChannel) {
         channel = newChannel;
         // "markDirty" tells vanilla that the chunk containing the tile entity has
         // changed and means the game will save the chunk to disk later.
         markDirty();
+    }
+
+    public boolean isChannelPowered(int channel) {
+        int poweredTransmitters = CHANNEL_STATES.getOrDefault(channel, 0);
+        return poweredTransmitters > 0;
+    }
+
+    public static List<WirelessReceiverTileEntity> getListeners(int channel) {
+        return CHANNEL_LISTENERS.computeIfAbsent(channel, $ -> new LinkedList<>());
+    }
+
+    public static void powerChannel(int channel, boolean channelPowered) {
+        int poweredTransmitters = CHANNEL_STATES.getOrDefault(channel, 0);
+        if (channelPowered)
+            CHANNEL_STATES.put(channel, ++poweredTransmitters);
+        else if (poweredTransmitters > 0)
+            CHANNEL_STATES.put(channel, --poweredTransmitters);
+        boolean finalIsChannelPowered = poweredTransmitters > 0;
+        getListeners(channel).forEach(te -> te.onChannelPoweredChanged(finalIsChannelPowered));
     }
 
     protected void updatePowered(boolean isPowered) {

@@ -38,7 +38,7 @@ public class WirelessReceiverTileEntity extends WirelessRedstoneTileEntity imple
     @Override
     public void onLoad() {
         if (!world.isRemote)
-            getListeners(getChannel()).add(this);
+            setChannel(DEFAULT_CHANNEL);
     }
 
     @Override
@@ -46,7 +46,7 @@ public class WirelessReceiverTileEntity extends WirelessRedstoneTileEntity imple
         getListeners(getChannel()).remove(this);
         super.setChannel(newChannel);
         getListeners(getChannel()).add(this);
-        isChannelPowered = CHANNEL_STATES.getOrDefault(newChannel, false);
+        isChannelPowered = isChannelPowered(getChannel());
     }
 
     public void onChannelPoweredChanged(boolean newPowered) {

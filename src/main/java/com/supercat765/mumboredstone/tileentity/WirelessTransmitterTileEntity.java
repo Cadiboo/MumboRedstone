@@ -9,6 +9,8 @@ import static net.minecraft.state.properties.BlockStateProperties.POWERED;
 
 public class WirelessTransmitterTileEntity extends WirelessRedstoneTileEntity implements ITickableTileEntity {
 
+    private boolean wasPowered = false;
+
     public WirelessTransmitterTileEntity() {
         this(MRTileEntityTypes.WIRELESS_TRANSMITTER.get());
     }
@@ -25,12 +27,16 @@ public class WirelessTransmitterTileEntity extends WirelessRedstoneTileEntity im
         if (!blockState.hasProperty(POWERED))
             return;
         boolean currentlyPowered = blockState.get(POWERED);
-        // TODO: This doesn't work with more than 1 emitter, maybe this should be changed to an OR and reset at the end/start of each tick?
-        notifyListeners(getChannel(), currentlyPowered);
+        if (currentlyPowered && !wasPowered)
+            powerChannel(getChannel(), true);
+        else if (!currentlyPowered && wasPowered)
+            powerChannel(getChannel(), false);
+        wasPowered = currentlyPowered;
     }
 
     @Override
     public void removeFromChannels() {
-        notifyListeners(getChannel(), false);
+        if (wasPowered)
+            powerChannel(getChannel(), false);
     }
 }
