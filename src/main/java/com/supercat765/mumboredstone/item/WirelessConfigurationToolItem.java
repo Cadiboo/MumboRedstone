@@ -1,13 +1,14 @@
 package com.supercat765.mumboredstone.item;
 
 import com.supercat765.mumboredstone.tileentity.WirelessRedstoneTileEntity;
-import net.minecraft.block.BlockState;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ActionResultType;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.Util;
+import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
 
 /**
@@ -29,10 +30,15 @@ public class WirelessConfigurationToolItem extends Item {
             return ActionResultType.SUCCESS;
         TileEntity tileEntity = world.getTileEntity(context.getPos());
         if (!(tileEntity instanceof WirelessRedstoneTileEntity))
-            return ActionResultType.SUCCESS;
+            return ActionResultType.PASS;
         WirelessRedstoneTileEntity wireless = (WirelessRedstoneTileEntity) tileEntity;
-        // TODO
-        wireless.setChannel(wireless.getChannel() + 1);
+        // TODO make a GUI
+        PlayerEntity player = context.getPlayer();
+        if (player == null)
+            return ActionResultType.SUCCESS;
+        int newChannel = wireless.getChannel() + (player.isSneaking() ? -1 : 1);
+        wireless.setChannel(newChannel);
+        player.sendMessage(new StringTextComponent("New channel: " + newChannel), Util.DUMMY_UUID);
         return ActionResultType.SUCCESS;
     }
 }
