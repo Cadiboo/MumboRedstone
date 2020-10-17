@@ -7,11 +7,12 @@ import net.minecraft.block.RedstoneDiodeBlock;
 import net.minecraft.state.StateContainer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Direction;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.World;
 
 /**
  * Outputs a redstone signal from it's wireless channel.
- * TODO: Make this not accept power from normal redstone
  */
 public class WirelessReceiverBlock extends RedstoneDiodeBlock {
     public WirelessReceiverBlock(Properties properties) {
@@ -19,8 +20,15 @@ public class WirelessReceiverBlock extends RedstoneDiodeBlock {
         this.setDefaultState(this.stateContainer.getBaseState().with(HORIZONTAL_FACING, Direction.NORTH).with(POWERED, false));
     }
 
+    @Override
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
         builder.add(HORIZONTAL_FACING, POWERED);
+    }
+
+    /** Stops it accepting power from normal redstone */
+    @Override
+    protected int calculateInputStrength(World worldIn, BlockPos pos, BlockState state) {
+        return 0;
     }
 
     @Override
