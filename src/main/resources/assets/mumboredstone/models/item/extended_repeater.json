@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "mumboredstone:items/extended_repeater"
+        "layer0": "mumboredstone:item/extended_repeater"
     }
 }
