@@ -38,6 +38,7 @@ public class WirelessTransmitterTileEntity extends WirelessRedstoneTileEntity im
     public void removeFromChannel() {
         if (wasPowered)
             powerChannel(getChannel(), false);
+        wasPowered = false;
     }
 
 }
