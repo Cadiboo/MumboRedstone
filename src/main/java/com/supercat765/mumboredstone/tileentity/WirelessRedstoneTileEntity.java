@@ -12,8 +12,6 @@ import net.minecraft.tileentity.TileEntityType;
 import java.util.LinkedList;
 import java.util.List;
 
-import static net.minecraft.state.properties.BlockStateProperties.POWERED;
-
 /**
  * Wireless redstone between any blocks that are all in loaded chunks and on the same channel.
  */
@@ -37,6 +35,7 @@ public abstract class WirelessRedstoneTileEntity extends TileEntity {
     }
 
     public void setChannel(int newChannel) {
+        removeFromChannel();
         channel = newChannel;
         // "markDirty" tells vanilla that the chunk containing the tile entity has
         // changed and means the game will save the chunk to disk later.
@@ -62,11 +61,6 @@ public abstract class WirelessRedstoneTileEntity extends TileEntity {
         getListeners(channel).forEach(te -> te.onChannelPoweredChanged(finalIsChannelPowered));
     }
 
-    protected void updatePowered(boolean isPowered) {
-        world.setBlockState(pos, getBlockState().with(POWERED, isPowered));
-        world.notifyNeighborsOfStateChange(pos, getBlockState().getBlock());
-    }
-
     @Override
     public CompoundNBT write(CompoundNBT nbt) {
         nbt = super.write(nbt);
@@ -85,16 +79,16 @@ public abstract class WirelessRedstoneTileEntity extends TileEntity {
     @Override
     public void remove() {
         super.remove();
-        removeFromChannels();
+        removeFromChannel();
     }
 
 
     @Override
     public void onChunkUnloaded() {
         super.onChunkUnloaded();
-        removeFromChannels();
+        removeFromChannel();
     }
 
-    abstract void removeFromChannels();
+    abstract void removeFromChannel();
 
 }

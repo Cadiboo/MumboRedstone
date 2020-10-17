@@ -34,6 +34,11 @@ public class WirelessReceiverTileEntity extends WirelessRedstoneTileEntity imple
             updatePowered(true);
     }
 
+    private void updatePowered(boolean isPowered) {
+        world.setBlockState(pos, getBlockState().with(POWERED, isPowered));
+        world.notifyNeighborsOfStateChange(pos, getBlockState().getBlock());
+    }
+
     /** Called when this TE is added to the world, either by placing or being loaded from disk. */
     @Override
     public void onLoad() {
@@ -43,7 +48,6 @@ public class WirelessReceiverTileEntity extends WirelessRedstoneTileEntity imple
 
     @Override
     public void setChannel(int newChannel) {
-        getListeners(getChannel()).remove(this);
         super.setChannel(newChannel);
         getListeners(getChannel()).add(this);
         isChannelPowered = isChannelPowered(getChannel());
@@ -54,7 +58,7 @@ public class WirelessReceiverTileEntity extends WirelessRedstoneTileEntity imple
     }
 
     @Override
-    public void removeFromChannels() {
+    public void removeFromChannel() {
         getListeners(getChannel()).remove(this);
     }
 
