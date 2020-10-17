@@ -92,7 +92,6 @@ public abstract class WirelessRedstoneTileEntity extends TileEntity {
     @Override
     public void onChunkUnloaded() {
         super.onChunkUnloaded();
-
         removeFromChannels();
     }
 
