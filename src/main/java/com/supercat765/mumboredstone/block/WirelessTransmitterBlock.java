@@ -3,9 +3,6 @@ package com.supercat765.mumboredstone.block;
 import com.supercat765.mumboredstone.init.MRTileEntityTypes;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.state.BooleanProperty;
-import net.minecraft.state.StateContainer;
-import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
@@ -14,44 +11,29 @@ import net.minecraft.world.World;
 /**
  * Pretty much a copy of the lever block but without a facing direction
  */
-public class WirelessTransmitterBlock extends Block {
-    public static final BooleanProperty POWERED = BlockStateProperties.POWERED;
+public class WirelessTransmitterBlock extends WirelessRedstoneBlock {
 
     public WirelessTransmitterBlock(Properties properties) {
         super(properties);
-        this.setDefaultState(this.stateContainer.getBaseState().with(POWERED, false));
-    }
-
-    @Override
-    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
-        builder.add(POWERED);
     }
 
     /** Copied and modified from the Lamp */
     @Override
     public void neighborChanged(BlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos, boolean isMoving) {
-        if (worldIn.isRemote)
-            return;
-        if (state.get(POWERED) != worldIn.isBlockPowered(pos))
-            worldIn.setBlockState(pos, state.func_235896_a_(POWERED), 3);
+        updateState(state, worldIn, pos);
     }
 
     @Override
     public void onBlockAdded(BlockState state, World worldIn, BlockPos pos, BlockState oldState, boolean isMoving) {
-        if (worldIn.isRemote)
-            return;
-        if (state.get(POWERED) != worldIn.isBlockPowered(pos))
-            worldIn.setBlockState(pos, state.func_235896_a_(POWERED), 3);
+        updateState(state, worldIn, pos);
     }
 
-    /** Copied and modified from the Lever */
-    @Override
-    public void onReplaced(BlockState state, World worldIn, BlockPos pos, BlockState newState, boolean isMoving) {
-        if (!isMoving && !state.isIn(newState.getBlock())) {
-            if (state.get(POWERED))
-                worldIn.notifyNeighborsOfStateChange(pos, this);
-            super.onReplaced(state, worldIn, pos, newState, isMoving);
-        }
+    private void updateState(BlockState state, World worldIn, BlockPos pos) {
+        if (worldIn.isRemote)
+            return;
+        boolean isPowered = state.get(POWERED);
+        if (isPowered != worldIn.isBlockPowered(pos))
+            worldIn.setBlockState(pos, state.with(POWERED, !isPowered), 3);
     }
 
     @Override
