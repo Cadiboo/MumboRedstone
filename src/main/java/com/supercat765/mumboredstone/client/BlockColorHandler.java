@@ -29,17 +29,28 @@ public class BlockColorHandler {
 
     @SubscribeEvent
     public static void onBlockColorsInit(ColorHandlerEvent.Block event) {
-        registerBluestoneWireColorHandler(event.getBlockColors());
+        BlockColors blockColors = event.getBlockColors();
+        registerBluestoneWireColorHandler(blockColors);
+//        registerCapacitorColorHandler(blockColors);
     }
 
     private static void registerBluestoneWireColorHandler(BlockColors blockColors) {
         blockColors.register((state, world, pos, tintIndex) -> {
-            if (world == null || pos == null || state.getBlock() != MRBlocks.BLUESTONE_WIRE.get())
+            if (tintIndex != 0 || world == null || pos == null || state.getBlock() != MRBlocks.BLUESTONE_WIRE.get())
                 return WHITE;
             int power = state.get(BluestoneWireBlock.POWER);
             return BLUESTONE_WIRE_POWER_COLORS[power];
         }, MRBlocks.BLUESTONE_WIRE.get());
     }
+
+//    private static void registerCapacitorColorHandler(BlockColors blockColors) {
+//        blockColors.register((state, world, pos, tintIndex) -> {
+//            if (tintIndex != 0 || world == null || pos == null || state.getBlock() != MRBlocks.BLUESTONE_WIRE.get())
+//                return WHITE;
+//            int power = state.get(BluestoneWireBlock.POWER);
+//            return BLUESTONE_WIRE_POWER_COLORS[power];
+//        }, MRBlocks.BLUESTONE_WIRE.get());
+//    }
 
     public static void setBluestoneWirePowerColors(int unpoweredColor, int fullyPoweredColor) {
         for (int wirePowerLevel = 0; wirePowerLevel < BLUESTONE_WIRE_POWER_COLORS.length; wirePowerLevel++) {

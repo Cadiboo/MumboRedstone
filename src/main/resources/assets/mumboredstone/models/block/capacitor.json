@@ -4,7 +4,7 @@
         "particle": "blocks/repeater_off",
         "slab": "blocks/stone_slab_top",
         "top": "mumboredstone:block/capacitor_stand",
-        "cap": "mumboredstone:block/capacitor_5"
+        "cap": "mumboredstone:block/capacitor"
     },
     "elements": [
         {   "from": [ 0, 0, 0 ],
@@ -21,12 +21,12 @@
         {   "from": [ 6, 2, 6 ],
             "to": [ 10, 10, 10 ],
             "faces": {
-                "down":  { "uv": [ 0, 0, 4, 4 ], "texture": "#cap" },
-                "up":    { "uv": [ 0, 0, 4, 4 ], "texture": "#cap" },
-                "north": { "uv": [ 0,  4, 4, 12 ], "texture": "#cap" },
-                "south": { "uv": [ 4,  4, 8, 12 ], "texture": "#cap" },
-                "west":  { "uv": [ 8,  4, 12, 12 ], "texture": "#cap" },
-                "east":  { "uv": [ 12,  4, 16, 12 ], "texture": "#cap" }
+                "down":  { "uv": [ 0, 0, 4, 4 ], "texture": "#cap", "tintindex": 0 },
+                "up":    { "uv": [ 0, 0, 4, 4 ], "texture": "#cap", "tintindex": 0 },
+                "north": { "uv": [ 0,  4, 4, 12 ], "texture": "#cap", "tintindex": 0 },
+                "south": { "uv": [ 4,  4, 8, 12 ], "texture": "#cap", "tintindex": 0 },
+                "west":  { "uv": [ 8,  4, 12, 12 ], "texture": "#cap", "tintindex": 0 },
+                "east":  { "uv": [ 12,  4, 16, 12 ], "texture": "#cap", "tintindex": 0 }
             }
         }
     ]
